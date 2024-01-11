@@ -3,7 +3,7 @@ Ques 1
 import java.util.Scanner;
 public class Main{  
       
-    //main() method start  
+    
     public static void main( String args[] ) {  
           
         
@@ -18,3 +18,252 @@ public class Main{
             System.out.println(numbers[i]);  
         }  
    }  
+
+Ques 2
+public class IteratingArray {
+   public static void main(String args[]) {
+      
+      int myArray[] = new int[7];
+      
+      myArray[0] = 12;
+      myArray[1] = 14;
+      myArray[2] = 57;
+      myArray[3] = 17;
+      myArray[4] = 44;
+      myArray[5] = 45;
+      myArray[6] = 24;
+      
+      System.out.println("Contents of the array: ");
+      for(int i=0; i<myArray.length; i++) {
+         System.out.println(myArray[i]);
+      }
+   }
+}
+
+ques 3
+import java.util.*;
+public class SumOfArray {  
+    public static void main(String[] args) {      
+          
+          
+        int [] arr = new int [] {1, 2, 3, 4, 5};   
+        int sum = 0;  
+          
+       
+        for (int i = 0; i < arr.length; i++) {   
+           sum = sum + arr[i];  
+        }    
+        System.out.println("Sum of all the elements of an array: " + sum);  
+    }  
+}  
+
+Ques 4
+import Java.util.*;
+public class ArrayAverage {
+ 
+    public static void main(String[] args) {
+ 
+        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+ 
+
+        int length = array.length;
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+ 
+        double average = sum / length;
+         
+        System.out.println("Average of array : "+average);
+ 
+    }
+ 
+}
+
+Ques 5
+public class MaxMin {
+    public static void main(String[] args) {
+        int[] array = {5, 12, 9, 18, 3, 21};
+
+        int max = array[0];
+        int min = array[0]; 
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i]; // Update maximum value
+            }
+
+            if (array[i] < min) {
+                min = array[i]; // Update minimum value
+            }
+        }
+
+        System.out.println("Maximum value: " + max);
+        System.out.println("Minimum value: " + min);
+    }
+}
+
+Ques 6
+import Java.util.*;
+class Main {
+   
+   
+    static int findElement(int arr[], int n, int key)
+    {
+        for (int i = 0; i < n; i++)
+            if (arr[i] == key)
+                return i;
+
+        return -1;
+    }
+ 
+
+    public static void main(String args[])
+    {
+        int arr[] = { 12, 34, 10, 6, 40 };
+        int n = arr.length;
+ 
+        
+        int key = 40;
+       
+          
+        int position = findElement(arr, n, key);
+ 
+        if (position == -1)
+            System.out.println("Element not found");
+        else
+            System.out.println("Element Found at Position: "
+                               + (position + 1));
+    }
+}
+
+Ques 7
+import java.util.Scanner;
+class Insert 
+{
+    public static void main(String[] args) 
+    {
+        int len, p,ele;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length of an array:");
+        len = sc.nextInt();
+        int arr[] = new int[len+1];
+        System.out.println("Enter "+len+" elements:");
+        for(int i = 0; i < len; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        System.out.print("Enter the element which you want to insert:");
+        ele = sc.nextInt();
+        arr[len] = ele;
+        System.out.print("After inserting : ");
+        for(int i = 0; i <len; i++)
+        {
+            System.out.print(arr[i]+",");
+        }
+        System.out.print(arr[len]);
+        
+    }
+}
+
+Ques 8
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{1,2,3,4,5};
+        int[] arr_new = new int[arr.length-1];
+        int j=3;
+        for(int i=0, k=0;i<arr.length;i++){
+            if(i!=j){
+                arr_new[k]=arr[i];
+                k++;
+}
+        }
+        System.out.println("Before deletion :" + Arrays.toString(arr));
+        System.out.println("After deletion :" + Arrays.toString(arr_new));
+
+    }
+}
+
+Ques 9
+
+
+public class reverse { 
+  static void reverse(int a[], int n) 
+    { 
+        int[] b = new int[n]; 
+        int j = n; 
+        for (int i = 0; i < n; i++) { 
+            b[j - 1] = a[i]; 
+            j = j - 1; 
+        } 
+   
+        System.out.println("Reversed array is: \n"); 
+        for (int k = 0; k < n; k++) { 
+            System.out.println(b[k]); 
+        } 
+    } 
+  
+    public static void main(String[] args) 
+    { 
+ int [] arr = {10, 20, 30, 40, 50}; 
+        reverse(arr, arr.length); 
+    } 
+} 
+
+Ques 10
+public static void main(String[] args) {    
+        //Initialize array     
+        int [] arr = new int [] {1, 2, 3, 4, 5};     
+        //n determine the number of times an array should be rotated.    
+        int n = 3;    
+           
+        //Displays original array    
+        System.out.println("Original array: ");    
+        for (int i = 0; i < arr.length; i++) {     
+            System.out.print(arr[i] + " ");     
+        }      
+
+        for(int i = 0; i < n; i++){    
+            int j, last;    
+            
+            last = arr[arr.length-1];    
+            
+            for(j = arr.length-1; j > 0; j--){    
+                  arr[j] = arr[j-1];    
+            }    
+            
+            arr[0] = last;    
+        }    
+        
+        System.out.println();    
+            
+        
+        System.out.println("Array after right rotation: ");    
+        for(int i = 0; i< arr.length; i++){    
+            System.out.print(arr[i] + " ");    
+        }    
+    }    
+}    
+Ques 11
+import java.util.Arrays;
+ 
+class Main {
+    public static void main(String args[])
+    {
+        int[] arr = { 10, -6, 23, 7, 97, -92, 59 };
+        System.out.println("The original array is: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        Arrays.sort(arr);
+        System.out.println("\nThe sorted array is: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
